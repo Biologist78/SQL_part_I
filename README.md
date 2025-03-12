@@ -25,9 +25,9 @@ AND district NOT LIKE '% %';
 #### Решение
 
 ```sql
-SELECT CAST(payment_date AS DATE), amount 
+SELECT payment_date, amount 
 FROM payment
-WHERE payment_date BETWEEN '2005-06-15' AND '2005-06-18'
+WHERE payment_date BETWEEN '2005-06-15 00:00:01' AND '2005-06-18 23:59:59'
 AND amount > 10.00 ;
 ```
 
